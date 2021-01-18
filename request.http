@@ -1,0 +1,39 @@
+### bitcoin
+POST http://localhost:12345/api/v1/sign_transaction
+Accept: /
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "gate": "bitcoin",
+  "tx": {
+    "utxo": {
+      "hash": "fff7f7881a8099afa6940d42d1e7f6362bec38171ea3edf433541db4e4ad969f",
+      "index": 0,
+      "sequence": 4294967295,
+      "amount": 625000000
+    },
+    "to_address": "1Bp9U1ogV3A14FMvKbRJms7ctyso4Z4Tcx",
+    "change_address": "1FQc5LdgGHMHEN9nwkjmz6tWkxhPpxBvBU",
+    "byteFee": 1,
+    "amount": 1000000
+  }
+}
+
+
+### eth
+POST http://localhost:12345/api/v1/sign_transaction
+Accept: /
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "gate": "eth",
+  "tx": {
+    "to_address": "0x32Be343B94f860124dC4fEe278FDCBD38C102D88",
+    "amount": "1000000",
+    "nonce": "1",
+    "gas_price": "3",
+    "gas_limit": "5"
+  }
+}
